@@ -4,6 +4,7 @@ Computer Vision Framework for Capsule Endoscopy
 This project focuses on developing a Computer Vision framework for analyzing capsule endoscopy images and classifying diseases. Using deep learning models, we aim to assist medical professionals in detecting gastrointestinal disorders more efficiently.
 
 📌 Project Overview
+
 ✅ Image Preprocessing – Noise reduction, contrast enhancement, resizing.
 ✅ Deep Learning Model – CNN-based architecture for disease classification.
 ✅ Dataset Handling – Efficient storage and preprocessing pipeline.
