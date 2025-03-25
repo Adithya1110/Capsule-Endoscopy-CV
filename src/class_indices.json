@@ -1,0 +1,12 @@
+{
+    "Angioectasia": 0,
+    "Bleeding": 1,
+    "Erosion": 2,
+    "Erythema": 3,
+    "Foreign Body": 4,
+    "Lymphangiectasia": 5,
+    "Normal": 6,
+    "Polyp": 7,
+    "Ulcer": 8,
+    "Worms": 9
+}
