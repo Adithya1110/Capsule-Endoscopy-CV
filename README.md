@@ -1,127 +1,116 @@
-Computer Vision Framework for Capsule Endoscopy
+# 🏥 Computer Vision Framework for Capsule Endoscopy  
+**Automated Disease Classification using Deep Learning**  
 
-🚀 Automated Disease Classification using Deep Learning
+![Healthcare AI](https://img.shields.io/badge/Field-Medical%20AI-blue) ![Python](https://img.shields.io/badge/Python-3.8%2B-green) ![License](https://img.shields.io/badge/License-MIT-orange) ![Classes](https://img.shields.io/badge/Classes-10%20Conditions-purple)
 
-This project focuses on developing a Computer Vision framework for analyzing capsule endoscopy images and classifying diseases. Using deep learning models, we aim to assist medical professionals in detecting gastrointestinal disorders more efficiently.
+## 📌 Project Overview  
+This project develops a **Computer Vision framework** to analyze capsule endoscopy images and classify gastrointestinal diseases using deep learning. The system assists medical professionals in faster and more accurate diagnosis of conditions like:
+### 🔍 Target Conditions
+| Category | Conditions |
+|----------|------------|
+| **Vascular** | Angioectasia, Bleeding |
+| **Inflammatory** | Erosion, Erythema, Ulcer |
+| **Structural** | Polyp, Lymphangiectasia, Foreign Body |
+| **Infectious** | Worms |
+| **Normal** | Healthy mucosa |
+### Key Features  
+✅ **Image Preprocessing** – Noise reduction, contrast enhancement, resizing  
+✅ **CNN Architecture** – Custom deep learning model for disease classification  
+✅ **Efficient Data Pipeline** – Optimized dataset handling and augmentation  
+✅ **Comprehensive Metrics** – Accuracy, precision, recall, and F1-score tracking  
+✅ **Web Interface** (Optional) – StreamLit-based UI for clinical use  
 
-📌 Project Overview
-
-✅ Image Preprocessing – Noise reduction, contrast enhancement, resizing.
-
-✅ Deep Learning Model – CNN-based architecture for disease classification.
-
-✅ Dataset Handling – Efficient storage and preprocessing pipeline.
-
-✅ Evaluation & Metrics – Accuracy, precision, recall, and F1-score.
-
-✅ User Interface – Web-based interface (optional).
-
-📁 Project Structure
-
-bash
-
-Copy
-
-Edit
-
+## 📂 Project Structure  
+```bash
 capsule-endoscopy-CV/
+├── Data/                  # Dataset (external storage)
+├── Models/                # Saved model weights (.h5/.pth)
+├── Notebooks/             # Jupyter notebooks for EDA & prototyping
+│   ├── Custom_CNN.ipynb   # Custom CNN Model Training
+|   ├── Resnet.ipynb       # Resnet Model Training
+│   └── VGG16.ipynb        # VGG Model Training 
+├── src/                   # Production code  
+│   ├── main.py            # StreamLit application  
+│   ├── Model_Train.ipynb  # Training Model  
+│   └── class_indices.json # Classes  
+├── requirements.txt       # Python dependencies  
+├── LICENSE                # MIT License  
+└── README.md              # This document
 
-│── data/                 # Dataset (stored externally, use download script)
-
-│── models/               # Trained models
-
-│── notebooks/            # Jupyter notebooks for EDA & model training
-
-│── src/                  # Source code for image classification
-
-│   ├── main.py           # StreamLit Script
-
-│   ├── Model_Train.py    # Model training script
-
-│   ├── Class_indices.json  #Involves classes of diseases
-
-│── requirements.txt      # Dependencies
-
-│── README.md             # Project overview
-
-│── LICENSE               # License information
+```
 
 🛠️ Installation & Setup
 
 1️⃣ Clone the Repository
-
-bash
-
-Copy
-
-Edit
-
-git clone https://github.com/your-username/capsule-endoscopy-CV.git
+```bash
+git clone https://github.com/Adithya1110/Capsule-Endoscopy-CV.git
 
 cd capsule-endoscopy-CV
+```
 
 2️⃣ Install Dependencies
-
-bash
-
-Copy
-
-Edit
+```bash
 
 pip install -r requirements.txt
+```
 
 3️⃣ Download Dataset
-Since the dataset is too large for GitHub, download it using the script:
+```bash
+Use the script in data/ directory:
 
-bash
+python data/Data.py
 
-Copy
+Or Use it directly from GitHub:
 
-Edit
-
-python download_data.py
+Folder -> Data
+```
 
 4️⃣ Train the Model
+```bash
 
-bash
+After downloading the dataset, train the model using the provided Jupyter notebook:
 
-Copy
+Open notebooks/Model_Train.ipynb
 
-Edit
+Change the dataset and model path as needed
 
-python src/train.py
+Train the model
+```
 
-5️⃣ Run StreamLit Script
+5️⃣ Run Streamlit Application
 
-bash
+Once the model is trained, deploy it using Streamlit:
 
-Copy
+Modify the paths in src/main.py to point to the trained model and class indices.
 
-Edit
+Run the application:
+```bash
 
-streamlit run .\main.py
+streamlit run src/main.py
+```
 
-📊 Model Performance
+## 📊 Model Performance
 
-Metric	Score
+### Classification Metrics (Weighted Average)
 
-Accuracy	92.5%
+| Metric     | Score  | Description |
+|------------|--------|-------------|
+| **Accuracy** | 92.5% | Overall correct predictions |
+| **Precision** | 89.8% | True positives / (True positives + False positives) |
+| **Recall** | 91.2% | True positives / (True positives + False negatives) |
+| **F1-Score** | 90.5% | Harmonic mean of precision and recall |
 
-Precision	89.8%
+## 🤝 Contributors
 
-Recall	91.2%
+### Core Development Team
+- **Sai Sathwik Kosuru**  :microscope::wrench:  
 
-F1-Score	90.5%
+- **Adithya Om Sangani** :robot::computer: 
 
-🤝 Contributors
+- **Srinivas Pullaboina** :book::bar_chart:  
 
-Sai Sathwik Kosuru
-
-Adithya Om Sangani
-
-Srinivas Pullaboina
-
-Sandhya Baindla
+- **Sandhya Baindla** :art::test_tube:  
 
 📝 License
+
 This project is licensed under the MIT License – see the LICENSE file for details.
